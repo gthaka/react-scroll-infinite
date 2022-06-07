@@ -10,11 +10,11 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY package*.json ./
 
-# copy our application / program files
-COPY . ./
-
 # run the instruction / command
 RUN npm i
+
+# copy our application / program files
+COPY . ./
 
 # CMD node app.js
 CMD npm start
